@@ -183,7 +183,7 @@ export default function WorkSection() {
         <div className="flex items-center gap-3 mb-4">
           <span className="w-2.5 h-2.5 rounded-full bg-[#ffffff] animate-pulse" />
           <span className="font-normal text-xs sm:text-sm tracking-[0.25em] uppercase text-[#000000]">
-            02 / SELECTED REELS & WORK
+            02  SELECTED REELS & WORK
           </span>
         </div>
 

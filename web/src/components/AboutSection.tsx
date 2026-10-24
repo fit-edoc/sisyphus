@@ -137,7 +137,7 @@ export default function AboutSection() {
             className="lg:col-span-6 flex flex-col gap-8"
           >
             {/* The Video Player Card */}
-            <div className="relative group w-full aspect-[4/3] sm:aspect-[16/10] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-black shadow-2xl border border-[#197A50]/15">
+            <div className="relative group w-full aspect-[4/3] sm:aspect-[16/10] rounded overflow-hidden bg-black shadow-2xl border border-[#197A50]/15">
               <video
                 ref={videoRef}
                 src="/video/about.mp4"
@@ -198,7 +198,7 @@ export default function AboutSection() {
             </div>
 
             {/* Tagline / Quote directly after the video */}
-            <div className="relative p-6 sm:p-8 rounded-[24px] bg-[#197A50]/[0.04] border border-[#197A50]/15">
+            <div className="relative p-6 sm:p-8 rounded bg-[#197A50]/[0.04] border border-[#197A50]/15">
               <Quote className="w-8 h-8 text-[#197A50]/30 mb-3" />
               <blockquote className="font-headline font-normal text-lg sm:text-xl md:text-2xl text-[#197A50] leading-snug tracking-tight">
                 “If a story doesn’t move people to stop their thumb and act, it’s just expensive digital noise.”

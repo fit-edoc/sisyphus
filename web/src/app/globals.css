@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/GoogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #197A50;
+  --forest-green: #197A50;
+  --forest-dark: #156642;
+  --mint: #20ff92;
+  --font-google-sans: 'Google Sans', system-ui, -apple-system, sans-serif;
+}
+
+@theme {
+  --color-background: #197A50;
+  --color-forest: #197A50;
+  --color-forest-dark: #156642;
+  --color-mint: #20ff92;
+  --font-google-sans: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif;
+  --font-headline: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif;
+  --font-hero: var(--font-archivo), var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Lenis handles smooth scrolling seamlessly without CSS conflicts */
+}
+
+body {
+  background-color: #197A50;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+/* Hero heading exception: keeps bold uppercase display styling */
+.font-hero-headline {
+  font-family: var(--font-archivo), var(--font-jakarta), system-ui, -apple-system, sans-serif !important;
+  font-weight: 850 !important;
+}
+
+/* Whole web heading, subheading, and paragraph: Google Sans with max weight 400 */
+h1:not(.font-hero-headline),
+h2:not(.font-hero-headline),
+h3:not(.font-hero-headline),
+h4:not(.font-hero-headline),
+h5:not(.font-hero-headline),
+h6:not(.font-hero-headline),
+p,
+blockquote,
+.font-headline:not(.font-hero-headline),
+.font-body {
+  font-family: var(--font-google-sans), 'Google Sans', system-ui, -apple-system, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+
+/* Scribble animation: subtle organic floating */
+@keyframes subtleScribbleDrift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.4deg);
+  }
+}
+
+.animate-scribble-drift {
+  animation: subtleScribbleDrift 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scribble-drift {
+    animation: none !important;
+  }
+}
+
+/* Horizontal marquee reel animation */
+@keyframes marqueeSlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlow 38s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars for clean carousel on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Clockwise traveling border line animation */
+@keyframes borderClockwise {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-border-clockwise {
+  animation: borderClockwise 7s linear infinite;
+}
+
+.animate-border-clockwise-fast {
+  animation: borderClockwise 3.8s linear infinite;
+}
+
