@@ -209,7 +209,7 @@ export default function CtaSection() {
 
       {/* Streamlined, high-impact CTA card with clockwise traveling border line */}
       <div className="relative z-10 max-w-5xl mx-auto">
-        <div className="group/card relative rounded-[32px] sm:rounded-[40px] md:rounded-[44px] bg-black/50 backdrop-blur-xl p-8 sm:p-12 md:p-16 overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
+        <div className="group/card relative rounded-[32px] sm:rounded-[40px] md:rounded-[44px] bg-black/50 backdrop-blur-xl p-6 sm:p-12 md:p-16 overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-[0_20px_80px_rgba(0,0,0,0.6)]">
           {/* Subtle static card inner border */}
           <div
             aria-hidden="true"
@@ -285,51 +285,37 @@ export default function CtaSection() {
           </div>
 
           {/* Clean, simplified CTA action buttons */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2.5 sm:gap-4">
             {/* Primary WhatsApp Direct CTA */}
             <a
               href={`https://wa.me/?text=${encodeURIComponent(prefilledWhatsAppQuery)}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Start chat on WhatsApp"
-              className="inline-flex items-center justify-center gap-3 bg-[#20FF92] hover:bg-[#2eff9e] text-black font-extrabold text-sm sm:text-base tracking-wider uppercase px-7 py-4 rounded-full active:scale-95 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(32,255,146,0.5)] cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-[#20FF92] hover:bg-[#2eff9e] text-black font-extrabold text-xs sm:text-base tracking-wider uppercase px-4 py-2.5 sm:px-7 sm:py-4 rounded-full active:scale-95 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(32,255,146,0.5)] cursor-pointer"
             >
-              <WhatsAppLineIcon className="w-5 h-5 text-black" />
+              <WhatsAppLineIcon className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
               <span>START A CONVERSATION</span>
-              <span className="w-6 h-6 rounded-full bg-black text-[#20FF92] flex items-center justify-center ml-1">
-                <ArrowUpRightIcon className="w-3.5 h-3.5" />
+              <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-black text-[#20FF92] flex items-center justify-center ml-0.5 sm:ml-1">
+                <ArrowUpRightIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </span>
             </a>
 
-            {/* Direct Email CTA */}
-            <a
-              href={prefilledEmailHref}
-              aria-label="Send project inquiry email"
-              className="inline-flex items-center justify-center gap-2.5 bg-black/70 hover:bg-black text-white font-extrabold text-sm sm:text-base tracking-wider uppercase px-6 py-4 rounded-full border border-white/20 hover:border-white/40 active:scale-95 transition-all duration-300 shadow-md cursor-pointer"
-            >
-              <MailLineIcon className="w-4 h-4 text-[#20FF92]" />
-              <span>HELLO@SYSPUS.AGENCY</span>
-            </a>
+            {/* Email and Copy Buttons */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+              {/* Direct Email CTA */}
+              <a
+                href={prefilledEmailHref}
+                aria-label="Send project inquiry email"
+                className="inline-flex items-center justify-center gap-2 sm:gap-2.5 bg-black/70 hover:bg-black text-white font-extrabold text-xs sm:text-base tracking-wider uppercase px-3.5 py-2.5 sm:px-6 sm:py-4 rounded-full border border-white/20 hover:border-white/40 active:scale-95 transition-all duration-300 shadow-md cursor-pointer"
+              >
+                <MailLineIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#20FF92]" />
+                <span>HELLO@SYSPUS.AGENCY</span>
+              </a>
 
-            {/* Copy Email Helper Button */}
-            <button
-              type="button"
-              onClick={copyEmail}
-              aria-label="Copy email address"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm tracking-wide px-5 py-4 rounded-full border border-white/15 transition-all duration-200 active:scale-95 cursor-pointer"
-            >
-              {copiedEmail ? (
-                <>
-                  <CheckLineIcon className="w-4 h-4 text-[#20FF92]" />
-                  <span className="text-[#20FF92] font-bold">COPIED!</span>
-                </>
-              ) : (
-                <>
-                  <CopyLineIcon className="w-4 h-4 text-white/70" />
-                  <span className="text-white/80">COPY</span>
-                </>
-              )}
-            </button>
+              {/* Copy Email Helper Button */}
+            
+            </div>
           </div>
         </div>
       </div>

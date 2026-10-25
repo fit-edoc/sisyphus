@@ -13,7 +13,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-hero-headline text-white tracking-[-0.035em] leading-[0.93] uppercase select-none text-[38px] xs:text-[46px] sm:text-[62px] md:text-[76px] lg:text-[90px] xl:text-[102px] 2xl:text-[112px] max-w-[1300px]"
+          className="font-hero-headline text-white tracking-[-0.035em] leading-[0.93] uppercase select-none text-[30px] xs:text-[46px] sm:text-[62px] md:text-[76px] lg:text-[90px] xl:text-[102px] 2xl:text-[112px] max-w-[1300px]"
         >
           <span className="block whitespace-nowrap">GOOD STORIES</span>
           <span className="block whitespace-nowrap">MOVE MOUNTAINS.</span>
