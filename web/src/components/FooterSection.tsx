@@ -157,8 +157,11 @@ export default function FooterSection() {
     `Hi Syspus Team,\n\nI'd like to collaborate with syspus.agency on a new project.\n\n• Brand / Company:\n• Scope of Work (Social Reels, Branding, Full Production):\n• Target Timeline:\n• Budget Range:\n\nLooking forward to speaking with you!\n`
   )}`;
 
+  const [year, setYear] = useState("2026");
+
   // Dynamic live clock for modern agency vibe
   useEffect(() => {
+    setYear(new Date().getFullYear().toString());
     const updateTime = () => {
       const now = new Date();
       setCurrentTime(
@@ -219,7 +222,7 @@ export default function FooterSection() {
                 syspus.agency
               </h3>
               <p className="text-white/80 text-xs sm:text-sm font-normal tracking-wider uppercase mt-1">
-                © {new Date().getFullYear()} SYSPUS.AGENCY. ALL RIGHTS RESERVED.
+                © {year} SYSPUS.AGENCY. ALL RIGHTS RESERVED.
               </p>
               <p className="text-white/50 text-xs sm:text-sm leading-relaxed mt-2 max-w-sm">
                 Social-first creative agency moving mountains for brands that refuse to be ignored.
