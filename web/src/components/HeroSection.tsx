@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import HeroScribble from "./HeroScribble";
@@ -13,10 +14,13 @@ export default function HeroSection() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
       >
-        <img
+        <Image
           src="/images/footer.jpg"
           alt=""
-          className="w-full h-full object-cover object-center scale-105"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center scale-105"
         />
         {/* Forest green tint overlay to preserve the brand color scheme and guarantee text readability */}
         <div className="absolute inset-0 bg-[#197A50]/75 mix-blend-multiply" />
