@@ -4,22 +4,27 @@ import { Archivo_Black, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const googleSans = localFont({
-  src: "../../public/fonts/GoogleSans-VariableFont_GRAD,opsz,wght.ttf",
+  src: "../../public/fonts/GoogleSans.woff2",
   variable: "--font-google-sans",
   display: "swap",
   weight: "100 900",
+  preload: true,
 });
 
 const archivo = Archivo_Black({
   variable: "--font-archivo",
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  preload: true,
 });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "700", "800"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
